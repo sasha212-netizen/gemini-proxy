@@ -7,7 +7,7 @@ app = FastAPI()
 
 # Берем ключ из настроек окружения на Рендере
 API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={API_KEY}"
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={API_KEY}"
 
 @app.post("/proxy")
 async def proxy(request: Request):
